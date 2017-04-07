@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego</title>
+	<style type="text/css">
+		canvas{
+			border: solid;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="micanvas">
+		Tu navegador no soporta canvas
+	</canvas>
+	<script>
+		window.addEventListener('load',init);
+		function init(){
+			var canvas = document.getElementById("micanvas");
+			// acá llamo al elemento id="micanvas"
+
+			var ctx = canvas.getContext('2d');
+			// La variable ctx es el contexto 2d
+			ctx.fillStyle = '#999';
+			ctx.fillRect(20,20,50,50);
+			// El 20,20 es la posición en X y Y en px y el 50,50 es el tamaño en Px. el fillStyle es el color de relleno
+			console.log(ctx);
+
+
+		}
+	</script>
+</body>
+</html>
