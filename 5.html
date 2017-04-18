@@ -19,18 +19,20 @@
 			// acá llamo al elemento id="micanvas"
 
 			var ctx = canvas.getContext('2d');
+			var x = 10, y = 10, ancho = 20, alto = 40;
 			// La variable ctx es el contexto 2d
-			// Siempre va primero e color y luego defino la figura
-			ctx.fillStyle = 'red';
-			ctx.fillRect(20,20,50,50);
-			ctx.globalAlpha = 0.1;
-			ctx.strokeStyle = 'blue';
-			ctx.lineWidth = 1;
-			ctx.strokeRect(90,90,50,50);
-			// El 20,20 es la posición en X y Y en px y el 50,50 es el tamaño en Px. el fillStyle es el color de relleno
-			console.log(ctx);
+			// Rectángulo básico
+			// Estos tres tienen coordenadas en (x,y,ancho,alto) 
+			ctx.fillRect(x,y,ancho,alto);
+			// Rectángulo solo lineas
+			ctx.strokeRect(x+20,y+20,ancho,alto);
+			// Rectángulo invisible
+			erase(canvas.ctx);
+		}
 
-
+		function erase(canvas,ctx)
+		{
+			ctx.clearRect(0,0,canvas.width,canvas.height);
 		}
 	</script>
 </body>
